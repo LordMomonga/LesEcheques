@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP3EchecsETU.enums
+namespace TP3EchecsETU
 {
-    public enum TypePiece
+    public enum Type
     {
-        Roi,
-        Reine,
-        Tour,
+        Pion,
         Fou,
         Cavalier,
-        Pion
+        Tour,
+        Dame,
+        Roi,
     }
 }

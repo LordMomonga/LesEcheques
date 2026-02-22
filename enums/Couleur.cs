@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP3EchecsETU.enums
+namespace TP3EchecsETU
 {
-   public enum Couleur
+    public enum Couleur
     {
         Blanc,
-        Noir
+        Noir,
     }
 }

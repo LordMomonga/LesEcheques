@@ -4,16 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP3EchecsETU.enums
+namespace TP3EchecsETU
 {
     public enum EtatPartie
     {
-      EnCours,
-      Echec,
-      EchecEtMat,
-      Pat,
-      Abandon
-
-
+        EnCours,
+        EchecEtMat,
+        Nulle,
+        Abandonnee,
     }
 }
