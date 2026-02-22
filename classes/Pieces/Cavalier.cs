@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Audrey
+
 namespace TP3EchecsETU
 {
     public class Cavalier : Piece
@@ -15,7 +17,6 @@ namespace TP3EchecsETU
         {
             CoupsPossibles.Clear();
 
-            // Déplacements en L : toutes les combinaisons ±1/±2
             int[][] deplacements =
             {
                 new[] { -2, -1 },

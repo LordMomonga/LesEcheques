@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Samuel
+
 namespace TP3EchecsETU
 {
     public class Tour : Piece

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Louis-Émile
+
 namespace TP3EchecsETU
 {
     public class Fou : Piece

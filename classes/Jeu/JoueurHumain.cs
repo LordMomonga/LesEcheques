@@ -1,4 +1,5 @@
-// Étudiant 1 : Louis
+// Louis-Émile
+
 namespace TP3EchecsETU
 {
     public class JoueurHumain : IJoueur
@@ -31,13 +32,13 @@ namespace TP3EchecsETU
 
                 if (piece == null)
                 {
-                    Console.WriteLine("❌ Aucune pièce à cette position. Réessayez.");
+                    Console.WriteLine("Aucune pièce à cette position. Réessayez.");
                     continue;
                 }
 
                 if (piece.Couleur != Couleur)
                 {
-                    Console.WriteLine("❌ Cette pièce ne vous appartient pas. Réessayez.");
+                    Console.WriteLine("Cette pièce ne vous appartient pas. Réessayez.");
                     continue;
                 }
 
@@ -46,7 +47,7 @@ namespace TP3EchecsETU
                 if (piece.CoupsPossibles.Count == 0)
                 {
                     Console.WriteLine(
-                        "❌ Cette pièce n'a aucun coup possible. Choisissez-en une autre."
+                        "Cette pièce n'a aucun coup possible. Choisissez-en une autre."
                     );
                     continue;
                 }
@@ -71,7 +72,7 @@ namespace TP3EchecsETU
 
                 if (coup == null)
                 {
-                    Console.WriteLine("❌ Coup invalide. Réessayez.");
+                    Console.WriteLine("Coup invalide. Réessayez.");
                     continue;
                 }
 
@@ -97,7 +98,7 @@ namespace TP3EchecsETU
                 var pos = new Position(ligne, colonne);
                 if (!pos.EstValide())
                 {
-                    Console.WriteLine("❌ Position hors du plateau (1-8). Réessayez.");
+                    Console.WriteLine("Position hors du plateau (1-8). Réessayez.");
                     return null;
                 }
 
@@ -106,7 +107,7 @@ namespace TP3EchecsETU
             catch
             {
                 Console.WriteLine(
-                    "❌ Format invalide. Entrez deux nombres séparés par un espace (ex: 2 3)."
+                    "Format invalide. Entrez deux nombres séparés par un espace (ex: 2 3)."
                 );
                 return null;
             }

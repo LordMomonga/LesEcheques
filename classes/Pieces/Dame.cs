@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Audrey
+
 namespace TP3EchecsETU
 {
     public class Dame : Piece
