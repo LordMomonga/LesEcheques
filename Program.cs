@@ -1,15 +1,13 @@
-﻿global using TP3EchecsETU;
-using System.Drawing;
-using System.Text;
+﻿using System.Text;
 
 namespace TP3EchecsETU
 {
     public class Program
     {
         public const int TAILLE_PLATEAU = 8;
-        public const int LIGNE_CURSEUR_DEFAUT = 11;
+        public const int LIGNE_CURSEUR_DEFAUT = 25; // 8 lignes x 2 hauteur + marge
         public const int COLONNE_CURSEUR_DEFAUT = 0;
-        public const int TAILLE_CASE_COLONNES = 2;
+        public const int TAILLE_CASE_COLONNES = 5; // largeur d'une case en caractères
 
         private static readonly Dictionary<Type, char> symbolesPieces = new()
         {
@@ -102,6 +100,16 @@ namespace TP3EchecsETU
 
             for (int ligne = 0; ligne < TAILLE_PLATEAU; ligne++)
             {
+                // Ligne du haut de la case (vide)
+                for (int colonne = 0; colonne < TAILLE_PLATEAU; colonne++)
+                {
+                    DeterminerCouleurArrierePlan(ligne, colonne);
+                    Console.Write("     ");
+                }
+                Console.ResetColor();
+                Console.WriteLine();
+
+                // Ligne du milieu : contient la pièce
                 for (int colonne = 0; colonne < TAILLE_PLATEAU; colonne++)
                 {
                     DeterminerCouleurArrierePlan(ligne, colonne);
@@ -113,19 +121,31 @@ namespace TP3EchecsETU
                             piece.Couleur == Couleur.Blanc
                                 ? ConsoleColor.White
                                 : ConsoleColor.Black;
-                        Console.Write(symbolesPieces[piece.Type] + " ");
+                        Console.Write($"  {symbolesPieces[piece.Type]}  ");
                     }
                     else
                     {
-                        Console.Write("  ");
+                        Console.Write("     ");
                     }
                 }
                 Console.ResetColor();
-                Console.WriteLine($" {ligne + 1}");
+                Console.Write($"  {ligne + 1}");
+                Console.WriteLine();
+
+                // Ligne du bas de la case (vide)
+                for (int colonne = 0; colonne < TAILLE_PLATEAU; colonne++)
+                {
+                    DeterminerCouleurArrierePlan(ligne, colonne);
+                    Console.Write("     ");
+                }
+                Console.ResetColor();
+                Console.WriteLine();
             }
 
+            // Numéros de colonnes
+            Console.WriteLine();
             for (int colonne = 0; colonne < TAILLE_PLATEAU; colonne++)
-                Console.Write($" {colonne + 1}");
+                Console.Write($"  {colonne + 1}  ");
 
             Console.WriteLine();
             Console.SetCursorPosition(COLONNE_CURSEUR_DEFAUT, LIGNE_CURSEUR_DEFAUT);
