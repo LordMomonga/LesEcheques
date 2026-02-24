@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TP3Test\TP3Test.csproj" />
+  </ItemGroup>
+
 </Project>
